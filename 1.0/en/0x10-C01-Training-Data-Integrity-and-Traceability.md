@@ -2,42 +2,42 @@
 
 ## Control Objective
 
-This chapter addresses the sourcing, handling, and maintenance of training data in a way that preserves origin traceability, integrity, and quality. The core security concern is ensuring data has not been tampered with, poisoned, or corrupted.
+This chapter describes methods for sourcing, handling, and maintaining training data that preserve the traceability, integrity, and quality of the data's origins. The core security concern is ensuring data has not been tampered with, poisoned, or corrupted.
 
 ---
 
 ## C1.1 Training Data Origin & Data Security
 
-Training data origin and data security are critical to the security and trustworthiness of any AI system. Datasets must be sourced from verifiable origins and tracked across their full lifecycle so that tampering or unauthorized modification can be detected. Training data must be protected against tampering, corruption, and poisoning throughout its lifecycle.
+Tracking the origins of training data and maintaining data security is critical to the security and trustworthiness of any AI system. Datasets must be sourced from verifiable origins and changes must be tracked across their full lifecycle so that tampering or unauthorized modification can be detected. Training data must be protected against tampering, corruption, and poisoning throughout its lifecycle.
 
 | # | Description | Level |
 | :--------: | --------------------------------------------------------------------------------------------------------------------- | :---: |
 | **1.1.1** | **Verify that** training data includes only features, attributes, and fields required for the model's stated purpose. | 1 |
 | **1.1.2** | **Verify that** the lineage of each dataset and its components, including all transformations, augmentations, and merges, is recorded and can be reconstructed. | 1 |
-| **1.1.3** | **Verify that** an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, intended use constraints, and processing history. | 2 |
-| **1.1.4** | **Verify that** datasets are watermarked so their use can be attributed and any unauthorized use detected. | 3 |
-| **1.1.5** | **Verify that** data integrity is provided when training data is stored and transferred. | 2 |
-| **1.1.6** | **Verify that** integrity monitoring is applied to guard against unauthorized modifications or corruption of training data. | 2 |
-| **1.1.7** | **Verify that** all training datasets are uniquely identified, with change tracking, to support rollback and forensic analysis. | 3 |
+| **1.1.3** | **Verify that** an up-to-date inventory is kept of all training data sources, including information on the data's origins, any responsible parties, any licenses, all collection methods, any intended use constraints, and all processing histories. | 2 |
+| **1.1.4** | **Verify that** datasets are watermarked so their uses can be attributed and any unauthorized uses detected. | 3 |
+| **1.1.5** | **Verify that** data integrity is maintained as training data is stored and transferred. | 2 |
+| **1.1.6** | **Verify that** integrity monitoring is used to guard against unauthorized modifications or corruption of training data. | 2 |
+| **1.1.7** | **Verify that** all training datasets are uniquely identified with change tracking,  which will support rollback and forensic analysis. | 3 |
 
 ---
 
 ## C1.2 Data Labeling and Annotation Security
 
-Labeling and annotation processes must be protected against unauthorized modification, data leakage, and integrity compromise. Annotation platforms should enforce access control, preserve auditability, and protect labeling artifacts and sensitive label content throughout the training pipeline.
+Labeling and annotation processes must be protected against unauthorized modification, data leakage, and compromises of data integrity. Annotation platforms should enforce access control, preserve auditability, and protect labeling artifacts and sensitive label content throughout the training pipeline.
 
 | # | Description | Level |
 | :--------: | --------------------------------------------------------------------------------------------------------------------- | :---: |
-| **1.2.1** | **Verify that** labeling platforms enforce access controls that restrict who can create, modify, or approve annotations. | 1 |
+| **1.2.1** | **Verify that** labeling platforms enforce access controls to restrict who creates, modifies, or approves annotations. | 1 |
 | **1.2.2** | **Verify that** all labeling activities are recorded in logs. | 1 |
-| **1.2.3** | **Verify that** cryptographic integrity is applied to labeling artifacts. | 2 |
-| **1.2.4** | **Verify that** sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact. | 2 |
+| **1.2.3** | **Verify that** cryptographic integrity is applied to all labeling artifacts. | 2 |
+| **1.2.4** | **Verify that** any sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact. | 2 |
 
 ---
 
 ## C1.3 Training Data Quality and Security Assurance
 
-Training data quality and security assurance controls help detect corruption, poisoning, labeling errors, and exploitable dataset patterns before they affect model behavior. Pipelines should combine automated validation, poisoning detection, label quality checks, and bias analysis.
+Training data quality and security assurance controls play an important role in detecting corruption, locating poisoning, finding labeling errors, and discovering exploitable dataset patterns before any issues can affect any model behavior. Pipelines should combine automated validation, poisoning detection, label quality checks, and bias analysis.
 
 | # | Description | Level |
 | :--------: | --------------------------------------------------------------------------------------------------------------------- | :---: |
